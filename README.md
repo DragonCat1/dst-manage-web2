@@ -1,7 +1,39 @@
-# dst-manage-web2
+# dst-manage-web-vue
 
-只是把之前的框架全部换成 `antd` 组件，同时从create-react-app 改为 `vite`
+This template should help get you started developing with Vue 3 in Vite.
 
-方便管理，统一样式，并增加打包和编译速度
+## Recommended IDE Setup
 
-如果喜欢之前 ui 的，请使用 1.3.1 版本，后续版本都会根据这个版本更新
+[VSCode](https://code.visualstudio.com/) + [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar) (and disable Vetur).
+
+## Type Support for `.vue` Imports in TS
+
+TypeScript cannot handle type information for `.vue` imports by default, so we replace the `tsc` CLI with `vue-tsc` for type checking. In editors, we need [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar) to make the TypeScript language service aware of `.vue` types.
+
+## Customize configuration
+
+See [Vite Configuration Reference](https://vite.dev/config/).
+
+## Project Setup
+
+```sh
+npm install
+```
+
+### Compile and Hot-Reload for Development
+
+```sh
+npm run dev
+```
+
+### Type-Check, Compile and Minify for Production
+
+```sh
+npm run build
+```
+
+### Lint with [ESLint](https://eslint.org/)
+
+```sh
+npm run lint
+```

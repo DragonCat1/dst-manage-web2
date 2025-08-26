@@ -1,26 +1,18 @@
-import { defineConfig } from 'vite'
-import react from '@vitejs/plugin-react'
+import { fileURLToPath, URL } from 'node:url'
 
-const API_URL = "http://localhost:8082/"
+import { defineConfig } from 'vite'
+import vue from '@vitejs/plugin-vue'
+import vueDevTools from 'vite-plugin-vue-devtools'
 
 // https://vite.dev/config/
 export default defineConfig({
-  plugins: [react()],
-  server: {
-    open: false, // 项目启动时自动打开浏览器
-    proxy: {
-      '/api': {
-        target: API_URL,
-        changeOrigin: true,
-      },
-      '/steam': {
-        target: API_URL,
-        changeOrigin: true,
-      },
-      '/hello': {
-        target: API_URL,
-        changeOrigin: true,
-      },
+  plugins: [
+    vue(),
+    vueDevTools(),
+  ],
+  resolve: {
+    alias: {
+      '@': fileURLToPath(new URL('./src', import.meta.url))
     },
   },
 })
